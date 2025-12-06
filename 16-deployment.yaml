@@ -21,6 +21,11 @@ spec:
       containers:
       - name: nginx
         image: nginx:stable-perl
+      envFrom:
+      - configMapRef:
+          name: configmap
+      - secretRef:
+          name: secret
 ---
 apiVersion: v1
 kind: Service
