@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource_limits
+  labels:
+    project: roboshop
+    env: dev
+    purpose: resource_limits
+spec:
+  resources:
+    requests:
+      memory: "100Mi"
+    limits:
+      memory: "200Mi"
+  containers:
+  - name: nginx
+    image: nginx
