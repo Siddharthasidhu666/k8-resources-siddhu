@@ -7,14 +7,14 @@ metadata:
     env: dev
     purpose: resource-limits
 spec:
-  resources:
-    requests:
-      memory: "100Mi"
-    limits:
-      memory: "200Mi"
   containers:
   - name: nginx
     image: nginx
+    resources:
+      requests:
+        memory: "100Mi"
+      limits:
+        memory: "200Mi"
     envFrom:
       - configMapRef:
           name: configmap
