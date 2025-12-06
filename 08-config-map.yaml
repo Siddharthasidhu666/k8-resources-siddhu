@@ -9,3 +9,4 @@ metadata:
 data:
   player_initial_lives: "3"
   name: "siddhu"
+  messgae: "hello"
