@@ -3,10 +3,11 @@ kind: PersistentVolume
 metadata:
 name: ebs-static
 spec:
-capacity: storage: 20Gi
-accessModes:
-- ReadWriteOnce
-csi:
-    driver: ebs.csi.aws.com
-    fsType: ext4
-    volumeHandle: vol-0e27f89ae68790fce
+    capacity: 
+        storage: 20Gi
+    accessModes:
+    - ReadWriteOnce
+    csi:
+        driver: ebs.csi.aws.com
+        fsType: ext4
+        volumeHandle: vol-0e27f89ae68790fce
